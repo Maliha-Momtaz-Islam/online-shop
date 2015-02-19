@@ -1,0 +1,75 @@
+.{margin:0;padding:0}
+body{font-family:arial;font-size:16px;line-height:22px;background:url(images/back.jpg)no-repeat;background-size:cover;}
+.fix{overflow:hidden}
+.main{width:960px;margin:0px auto;display:block;background:#1B191E}
+.social{margin-bottom: -90px;
+    margin-left: 786px;
+    margin-top: -16px;}
+	
+.header{}
+.header img{width:178px}
+
+.slider{width:960px;margin-bottom:25px}
+.maincontent{margin-top:25px}
+ 
+/*menu*/
+.sidebar{background:#232531;height: 70px;width: 983px;min-height:78px}
+.sidebar ul{margin:0;padding:0;list-style:none;text-shadow: 0 2px 0px #fff;}
+.sidebar ul li{float:left;border-right:1px solid #1B191E;border-left: 1px solid #3E3E3E;position:relative}
+.sidebar ul li:first-child{border-left:0px solid}
+.sidebar ul li:last-child{border-right:0px solid}
+.sidebar ul li a{display:block;color:#666;padding:27px 55px;text-decoration:none;font-weight:bold}
+.sidebar ul li a:hover{color:#000;background:#fff}
+/*DROPDOWN CSS*/
+.sidebar ul li ul{position:absolute;left:-999999px}
+.sidebar ul li:hover ul{left:0px}
+.sidebar ul li ul{background:#3E3E3E}
+.sidebar ul li ul li{float:none;border-bottom:1px solid #3E3E3E; width:264px;border-right:0px;border-left:0px }
+.sidebar ul li ul li a{background:#3E3E3E;color:#fff;padding:10px 16px}
+.sidebar ul li ul li a:hover{}
+
+
+
+
+.etc{float:right;margin-top:25px}
+.etc ul{margin:0;padding:0;list-style:none}
+.etc ul li{font-weight:bold}
+.etc ul li a{display:block;color:#fff;text-decoration:none}
+.etc ul li a:hover img, ul a:focus img {outline: 3px solid #647AA5; }
+.etc ul li a:hover img, ul a:focus img {outline: 3px solid #647AA5; }
+.etc ul li a:hover :after
+{
+    content: attr(title);
+}
+.etc ul li a:hover {ul > li {
+    position: relative;
+    float: left;
+    list-style: none;
+    margin: 0 20px 20px 0;
+    font-size: 10px;
+}}
+.centre{float:right;margin-top:25px}
+.centre ul{margin:0;padding:0;list-style:none}
+.centre ul li{text-decoration:none;font-weight:bold}
+.centre ul li a{display:block}
+.centre ul li a:hover img, ul a:focus img {outline: 3px solid #647AA5; }
+.centre ul li a:hover :after
+{
+    content: attr(title);
+}
+.centre ul li a:hover {ul > li {
+    position: relative;
+    float: left;
+    list-style: none;
+    margin: 0 20px 20px 0;
+    font-size: 10px;
+}}
+.content{width:600px;padding-right:30px;overflow:hidden}
+.content h1{margin-bottom:15px;font-weight:normal}
+.content p{margin-bottom:15px;color:#FBFFE5}
+.content p{margin-bottom:15px;color:#FBFFE5}
+.content p{margin-bottom:15px;color:#FBFFE5}
+
+
+.footer{padding:-2px;Background:#BBBBBB}
+
