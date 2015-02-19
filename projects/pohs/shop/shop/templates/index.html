@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Maliha's</title>
+
+ <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/signin.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/static/js/warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="form-signin" > <!-- change it baby -->
+        <img src="static/img/logo.png" class="headerlogo"/><br>
+        <a class="btn btn-md btn-info" href="/cart/view">View Cart</a>
+        <a class="btn btn-md btn-primary" href="/product/add">Register New Product</a>
+        <a class="btn btn-md btn-success" href="/profile/">User Profiles</a>
+        <a class="btn btn-md btn-danger" href="/logout">Logout</a>
+        <div class="well">
+        <form action="/" method="POST">
+        <h2>Advanced Search</h2>
+        <b>Stock:</b> Minimum <input type="number" name="stock_min" value="{{stock_min}}"> Maximum <input type="number" name="stock_max" value="{{stock_max}}"><br>
+        <b>Price:</b> Minimum <input type="number" name="price_min" value="{{price_min}}"> Maximum <input type="number" name="price_max" value="{{price_max}}"><br>
+        <b>Order:</b> <select name="order"><option value="desc" selected="">Descending</option><option value="asc">Ascending</option></select>
+        <button class="btn btn-sm btn-primary btn-block" type="submit">Search</button>
+         </form>
+        </div>
+       
+        % for item in items:
+        <div class="well">
+            <h2>{{item[1]}}</h2>
+            <img src="/uploads/{{item[6]}}" style="width:100%;height:auto;"/>
+            Price: <strong style="font-size: 2em;">${{item[5]}}</strong>
+            Remaining: <strong>{{item[4]}}</strong>
+            <a class="btn btn-lg btn-success btn-block" href="/cart/add/{{item[0]}}/1" 
+            % if not (int(item[4]) > 0):
+            disabled
+            % end
+            >Add to Cart</a>
+            % if item[7]:
+            <a class="btn btn-md btn-primary btn-block" href="/product/edit/{{item[0]}}">Edit</a>
+            <a class="btn btn-md btn-danger btn-block" href="/product/delete/{{item[0]}}">Delete</a>
+            % end
+        </div>  
+        % end  
+      </div>
+
+    </div> <!-- /container -->
+  
+
+</body></html>

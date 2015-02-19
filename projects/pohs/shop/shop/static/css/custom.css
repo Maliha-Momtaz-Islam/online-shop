@@ -1,0 +1,19 @@
+
+
+body{background:url(img/banner.jpg)no-repeat;background-size:cover;}
+.bg {
+  
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+
+.jumbotron {
+  height: 350px;
+  color: black;
+  text-shadow: #444 0 1px 1px;
+  
+  
+}
+.row{float: left;}

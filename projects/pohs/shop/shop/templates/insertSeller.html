@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Register</title>
+
+ <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/signin.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/static/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" role="form" method="POST" action="/seller_register/process"> <!-- change it baby -->
+      <img src="/static/img/logo.png" class="headerlogo"/><br>
+        <h2 class="form-signin-heading" style="text-align: center;">Sign up (Seller)</h2>
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input id="inputUsername" class="form-control" placeholder="Username" required="" autofocus="" type="text" name="username">
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input id="inputPassword" class="form-control" placeholder="Password" required="" type="password" name="password">
+
+        <label for="inputMail" class="sr-only">Address</label>
+        <input id="inputMail" class="form-control" placeholder="Address" required="" type="address" name="address">
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+      </form>
+
+    </div> <!-- /container -->
+  
+
+</body></html>

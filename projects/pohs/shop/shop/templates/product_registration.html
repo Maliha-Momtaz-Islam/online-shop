@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>Register Product</title>
+
+ <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/signin.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/static/js/warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <form class="form-signin" role="form" method="POST" action="/product_registration/process" enctype="multipart/form-data"> <!-- change it baby -->
+        <a href="/"><img src="/static/img/logo.png" class="headerlogo"/><br></a>
+        <h2 class="form-signin-heading" style="text-align: center;">Register Product</h2>
+
+        <label for="product_name" class="sr-only">Product Name</label>
+        <input id="product_name" class="form-control" placeholder="Product Name" required="" autofocus="" type="text" name="product_name">
+
+        <label for="product_desc" class="sr-only">Product Description</label>
+        <textarea id="product_desc" class="form-control" placeholder="Description" required="" name="product_desc"></textarea>
+
+        <label for="stock" class="sr-only">Stock Amount</label>
+        <input id="stock" class="form-control" placeholder="Stock Amount" required="" type="number" name="stock">
+
+        <label for="price" class="sr-only">Price</label>
+        <input id="price" class="form-control" placeholder="Price" required="" type="text" name="price">
+
+        <label for="img" class="sr-only">Image</label>
+        <input type="file" name="img" id="img" lass="form-control" />
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" style="margin-top:10px">Register</button>
+      </form>
+
+    </div> <!-- /container -->
+  
+
+</body></html>
